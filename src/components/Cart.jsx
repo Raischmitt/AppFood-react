@@ -1,10 +1,10 @@
 import { useContext } from "react"
 
-import Modal from "./Modal"
-import CartContext from "../../store/CartContext"
-import { currencyFormatter } from "../../util/formatting";
-import Button from "./Button";
-import UserProgressContext from "../../store/UserProgressContext";
+import Modal from "./UI/Modal"
+import CartContext from "../store/CartContext"
+import { currencyFormatter } from "../util/formatting";
+import Button from "./UI/Button";
+import UserProgressContext from "../store/UserProgressContext";
 import CartItem from "./CartItem";
 
 export default function Cart() {

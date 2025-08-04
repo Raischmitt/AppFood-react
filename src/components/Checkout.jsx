@@ -1,11 +1,11 @@
 import { useContext } from 'react';
 
-import Modal from "./Modal";
-import Input from './Input';
-import Button from './Button';
-import CartContext from "../../store/CartContext";
-import { currencyFormatter } from '../../util/formatting';
-import UserProgressContext from '../../store/UserProgressContext';
+import Modal from './UI/Modal';
+import Input from './UI/Input';
+import Button from './UI/Button';
+import CartContext from "../store/CartContext";
+import { currencyFormatter } from '../util/formatting';
+import UserProgressContext from '../store/UserProgressContext';
 
 export default function Checkout() {
     const cartCtx = useContext(CartContext);
