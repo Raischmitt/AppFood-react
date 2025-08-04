@@ -10,11 +10,14 @@ export default function Modal({ children, open, onClose, className = '' }) {
             modal.showModal();
         }
 
-        return () => modal.close();
+        return () => {
+            if (modal && modal.close) {
+                modal.close();
+            }
+        };
     }, [open]);
 
-    return
-    createPortal(
+    return createPortal(
         <dialog ref={dialog} className={`modal ${className}`} onClose={onClose}>
             {children}
         </dialog>,

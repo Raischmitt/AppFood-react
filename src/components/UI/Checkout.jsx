@@ -9,7 +9,7 @@ import UserProgressContext from '../../store/UserProgressContext';
 
 export default function Checkout() {
     const cartCtx = useContext(CartContext);
-    const userProgressCtx = UserProgressContext(UserProgressContext);
+    const userProgressCtx = useContext(UserProgressContext);
 
     const cartTotal = cartCtx.items.reduce(
         (totalPrice, item) => totalPrice + item.quantity * item.price,
@@ -29,7 +29,7 @@ export default function Checkout() {
         fetch('http://localhost:3000/orders', {
             method: 'POST',
             headers: {
-                'Content-Type': 'aplication/json'
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify({
                 order: {
